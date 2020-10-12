@@ -4,7 +4,7 @@ Problema 15. Empezando con el número 1 y moviéndose hacia la izquierda y en se
 se genera una espiral de números como la siguiente:
 21 22 23 24 25
 20  7  8  9  10
-19  6   1   2  11
+19  6  1   2   11
 18  5  4   3  12
 17 16 15 14 13
 En el caso de esta espiral de 5x5, la suma de los números en la diagonal es 101.
@@ -20,12 +20,15 @@ using namespace std;
 
 int main() {
 
-    int numero = 5;
+    int numero;
     int esquina_1 = 0;
     int esquina_2 = 0;
     int esquina_3 = 0;
     int esquina_4 = 0;
     int suma_diagonales = 0;
+
+    cout << "Ingresa la dimension de la matriz: ";
+    cin >> numero;
 
     int numero_disminuido = numero;
     for (int i = 1; i <= numero; i +=2){
